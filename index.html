@@ -42,25 +42,30 @@
 
   <link rel="stylesheet" href="style.css">
 
-  <!-- এই CSS শুধু Page Switching এবং নতুন অংশগুলো ঠিকভাবে দেখানোর জন্য -->
+
+  <!-- ================= PAGE DESIGN ================= -->
+
   <style>
 
-    /* সব পেজ শুরুতে লুকানো */
     .site-page {
       display: none;
     }
 
-    /* বর্তমানে যে পেজ খোলা আছে */
     .site-page.active-page {
       display: block;
     }
 
-    /* Home */
+
+    /* HOME CONTACT */
+
     .home-contact {
       margin-top: 35px;
+      margin-bottom: 40px;
     }
 
-    /* Contact */
+
+    /* CONTACT */
+
     .contact-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -86,6 +91,9 @@
       text-decoration: none;
     }
 
+
+    /* GOOGLE MAP */
+
     .map-box {
       margin-top: 35px;
       background: #ffffff;
@@ -107,7 +115,9 @@
       border: 0;
     }
 
-    /* Teachers */
+
+    /* TEACHERS */
+
     .teacher-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -136,7 +146,9 @@
       margin: 6px 0;
     }
 
-    /* Gallery */
+
+    /* GALLERY */
+
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -165,7 +177,9 @@
       font-weight: bold;
     }
 
-    /* Notices */
+
+    /* NOTICE */
+
     .notice-list {
       margin-top: 35px;
     }
@@ -182,7 +196,9 @@
       margin-top: 0;
     }
 
-    /* Mobile */
+
+    /* MOBILE */
+
     @media (max-width: 768px) {
 
       .contact-grid,
@@ -217,9 +233,13 @@
 
   <div class="container">
 
-    <span>📍 যশোর, বাংলাদেশ</span>
+    <span>
+      📍 যশোর, বাংলাদেশ
+    </span>
 
-    <span>🎓 শিক্ষা • শৃঙ্খলা • মানবিকতা</span>
+    <span>
+      🎓 শিক্ষা • শৃঙ্খলা • মানবিকতা
+    </span>
 
   </div>
 
@@ -245,9 +265,13 @@
 
       <div>
 
-        <strong>প্রিজন্স পাবলিক স্কুল</strong>
+        <strong>
+          প্রিজন্স পাবলিক স্কুল
+        </strong>
 
-        <small>যশোর</small>
+        <small>
+          যশোর
+        </small>
 
       </div>
 
@@ -308,8 +332,6 @@
 
 <!-- =====================================================
      HOME PAGE
-     এখানে শুধু স্কুল সম্পর্কে অল্প কিছু তথ্য
-     এবং Contact Information থাকবে
 ===================================================== -->
 
 <section
@@ -389,13 +411,15 @@
 
 
 
-  <!-- HOME CONTACT -->
+  <!-- HOME CONTACT ONLY -->
 
   <div class="container home-contact">
 
     <div class="section-title">
 
-      <span>CONTACT</span>
+      <span>
+        CONTACT
+      </span>
 
       <h2>
         ☎️ যোগাযোগ
@@ -489,7 +513,9 @@
 
     <div class="section-title">
 
-      <span>ABOUT US</span>
+      <span>
+        ABOUT US
+      </span>
 
       <h2>
         ℹ️ আমাদের সম্পর্কে
@@ -547,7 +573,9 @@
 
     <div class="section-title">
 
-      <span>ACADEMIC</span>
+      <span>
+        ACADEMIC
+      </span>
 
       <h2>
         📚 শিক্ষাব্যবস্থা
@@ -636,7 +664,9 @@
 
     <div class="section-title">
 
-      <span>OUR TEACHERS</span>
+      <span>
+        OUR TEACHERS
+      </span>
 
       <h2>
         👨‍🏫 শিক্ষকমণ্ডলী
@@ -837,6 +867,26 @@
       </div>
 
 
+
+      <!-- ১০ - নতুন শিক্ষক -->
+
+      <div class="teacher-card">
+
+        <div class="teacher-icon">
+          👨‍🏫
+        </div>
+
+        <h3>
+          সাধন চন্দ্র মহন্ত
+        </h3>
+
+        <p>
+          বাংলা, ইংরেজি
+        </p>
+
+      </div>
+
+
     </div>
 
   </div>
@@ -858,7 +908,9 @@
 
     <div class="section-title">
 
-      <span>NOTICE BOARD</span>
+      <span>
+        NOTICE BOARD
+      </span>
 
       <h2>
         📢 নোটিশ
@@ -920,7 +972,9 @@
 
     <div class="section-title">
 
-      <span>PHOTO GALLERY</span>
+      <span>
+        PHOTO GALLERY
+      </span>
 
       <h2>
         🖼️ ফটো গ্যালারি
@@ -1001,7 +1055,9 @@
 
     <div class="section-title">
 
-      <span>CONTACT US</span>
+      <span>
+        CONTACT US
+      </span>
 
       <h2>
         ☎️ যোগাযোগ
@@ -1182,18 +1238,27 @@
 
 <script>
 
-  const pages = document.querySelectorAll(".site-page");
+  const pages =
+    document.querySelectorAll(".site-page");
 
-  const pageLinks = document.querySelectorAll("[data-page]");
+  const pageLinks =
+    document.querySelectorAll("[data-page]");
 
-  const menuButton = document.querySelector(".menu-btn");
+  const menuButton =
+    document.querySelector(".menu-btn");
 
-  const navLinks = document.querySelector(".nav-links");
+  const navLinks =
+    document.querySelector(".nav-links");
 
 
-  /* কোন পেজ দেখাবে */
+  /* =========================
+     PAGE SHOW FUNCTION
+  ========================= */
 
   function showPage(pageName) {
+
+
+    /* সব পেজ লুকাবে */
 
     pages.forEach(function(page) {
 
@@ -1201,6 +1266,8 @@
 
     });
 
+
+    /* নির্দিষ্ট পেজ দেখাবে */
 
     const selectedPage =
       document.getElementById(pageName);
@@ -1210,7 +1277,9 @@
 
       selectedPage.classList.add("active-page");
 
-    } else {
+    }
+
+    else {
 
       document
         .getElementById("home")
@@ -1219,7 +1288,7 @@
     }
 
 
-    /* পেজের একদম উপরে নিয়ে যাবে */
+    /* পেজের উপরে যাবে */
 
     window.scrollTo({
       top: 0,
@@ -1239,62 +1308,84 @@
 
 
 
-  /* মেনুর প্রতিটি বাটনে ক্লিক */
+  /* =========================
+     NAVIGATION CLICK
+  ========================= */
 
   pageLinks.forEach(function(link) {
 
-    link.addEventListener("click", function(event) {
+    link.addEventListener(
+      "click",
+      function(event) {
 
-      event.preventDefault();
+        event.preventDefault();
+
+
+        const pageName =
+          this.getAttribute("data-page");
+
+
+        showPage(pageName);
+
+
+        history.pushState(
+          null,
+          "",
+          "#" + pageName
+        );
+
+      }
+    );
+
+  });
+
+
+
+  /* =========================
+     BACK / FORWARD
+  ========================= */
+
+  window.addEventListener(
+    "popstate",
+    function() {
 
       const pageName =
-        this.getAttribute("data-page");
+        window.location.hash.replace("#", "") || "home";
+
 
       showPage(pageName);
 
-      history.pushState(
-        null,
-        "",
-        "#" + pageName
-      );
-
-    });
-
-  });
+    }
+  );
 
 
 
-  /* Browser Back / Forward */
-
-  window.addEventListener("popstate", function() {
-
-    const pageName =
-      window.location.hash.replace("#", "") || "home";
-
-    showPage(pageName);
-
-  });
-
-
-
-  /* সরাসরি #teachers বা অন্য লিংক দিয়ে ঢুকলেও */
+  /* =========================
+     DIRECT LINK
+  ========================= */
 
   const firstPage =
     window.location.hash.replace("#", "") || "home";
+
 
   showPage(firstPage);
 
 
 
-  /* Mobile Menu */
+  /* =========================
+     MOBILE MENU
+  ========================= */
 
   if (menuButton) {
 
-    menuButton.addEventListener("click", function() {
+    menuButton.addEventListener(
+      "click",
+      function() {
 
-      navLinks.classList.toggle("active");
+        navLinks.classList.toggle("active");
 
-    });
+      }
+    );
 
   }
 
