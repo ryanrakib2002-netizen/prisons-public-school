@@ -4,13 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<meta name="description"
+content="প্রিজন্স পাবলিক স্কুল, যশোর - শিক্ষা, শৃঙ্খলা ও মানবিক মূল্যবোধের সমন্বয়ে একটি সুন্দর ভবিষ্যৎ গড়ার প্রত্যয়।">
+
 <title>প্রিজন্স পাবলিক স্কুল, যশোর</title>
 
 <style>
+
 *{
-  box-sizing:border-box;
   margin:0;
   padding:0;
+  box-sizing:border-box;
 }
 
 html{
@@ -18,14 +22,15 @@ html{
 }
 
 body{
-  font-family:"Noto Sans Bengali","SolaimanLipi",Arial,sans-serif;
-  background:#f4f7fb;
-  color:#243447;
+  font-family:"Noto Sans Bengali","Arial",sans-serif;
+  background:#f5f8fb;
+  color:#222;
   line-height:1.7;
 }
 
 a{
   text-decoration:none;
+  color:inherit;
 }
 
 .container{
@@ -34,31 +39,35 @@ a{
   margin:auto;
 }
 
-/* TOP BAR */
+
+/* TOPBAR */
+
 .topbar{
   background:#123b5d;
   color:white;
-  padding:9px 0;
+  padding:8px 0;
   font-size:14px;
 }
 
 .topbar .container{
   display:flex;
   justify-content:space-between;
-  gap:10px;
+  gap:15px;
 }
 
+
 /* NAVBAR */
+
 .navbar{
   background:white;
+  box-shadow:0 3px 15px rgba(0,0,0,.08);
   position:sticky;
   top:0;
   z-index:1000;
-  box-shadow:0 3px 15px rgba(0,0,0,.10);
 }
 
 .nav-inner{
-  min-height:76px;
+  min-height:75px;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -69,40 +78,42 @@ a{
   display:flex;
   align-items:center;
   gap:10px;
-  color:#123b5d;
 }
 
 .brand img{
   width:55px;
   height:55px;
   object-fit:contain;
+  border-radius:50%;
 }
 
 .brand strong{
   display:block;
-  font-size:18px;
+  color:#123b5d;
+  font-size:19px;
 }
 
 .brand small{
-  color:#667085;
+  color:#777;
 }
 
 .nav-links{
   display:flex;
-  gap:4px;
   align-items:center;
+  gap:8px;
 }
 
 .nav-links a{
-  color:#344054;
-  padding:9px 10px;
+  padding:9px 11px;
   border-radius:8px;
   font-size:14px;
+  color:#333;
+  transition:.3s;
 }
 
 .nav-links a:hover{
-  background:#eaf3f9;
-  color:#0b628f;
+  background:#123b5d;
+  color:white;
 }
 
 .menu-btn{
@@ -110,187 +121,201 @@ a{
   border:0;
   background:#123b5d;
   color:white;
-  font-size:24px;
-  padding:5px 11px;
+  font-size:25px;
+  padding:5px 12px;
   border-radius:7px;
 }
 
-/* PAGE SYSTEM */
-.page{
-  display:none;
-}
-
-/* HOME IS DEFAULT */
-#home{
-  display:block;
-}
-
-/* SELECTED PAGE */
-.page:target{
-  display:block;
-}
 
 /* HERO */
+
 .hero{
-  background:linear-gradient(135deg,#eaf5fb,#fff);
-  padding:70px 0;
+  background:linear-gradient(135deg,#123b5d,#176b8f);
+  color:white;
+  padding:80px 0;
 }
 
 .hero-content{
-  min-height:500px;
-  display:flex;
+  display:grid;
+  grid-template-columns:1.5fr 1fr;
   align-items:center;
-  justify-content:space-between;
   gap:50px;
 }
 
-.hero-text{
-  max-width:650px;
-}
-
 .eyebrow{
-  color:#08739f;
-  font-weight:bold;
-  letter-spacing:2px;
+  letter-spacing:3px;
+  font-size:14px;
+  opacity:.85;
 }
 
 .hero h1{
-  color:#123b5d;
-  font-size:45px;
+  font-size:44px;
   line-height:1.3;
-  margin:12px 0 18px;
+  margin:10px 0 18px;
 }
 
 .hero p{
-  color:#475467;
   font-size:18px;
-  margin-bottom:28px;
+  max-width:650px;
 }
 
 .hero-buttons{
   display:flex;
   gap:12px;
+  margin-top:25px;
   flex-wrap:wrap;
 }
 
 .btn{
+  display:inline-block;
   padding:11px 20px;
   border-radius:8px;
   font-weight:bold;
+  transition:.3s;
 }
 
-.primary{
-  background:#123b5d;
+.btn.primary{
+  background:white;
+  color:#123b5d;
+}
+
+.btn.outline{
+  border:1px solid white;
   color:white;
 }
 
-.outline{
-  border:2px solid #123b5d;
-  color:#123b5d;
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.hero-logo{
+  text-align:center;
 }
 
 .logo-card{
   background:white;
-  padding:25px;
+  padding:30px;
   border-radius:20px;
-  text-align:center;
-  box-shadow:0 10px 35px rgba(0,0,0,.12);
+  box-shadow:0 15px 40px rgba(0,0,0,.2);
+  display:inline-block;
 }
 
 .logo-card img{
-  width:230px;
-  height:230px;
-  object-fit:contain;
+  width:220px;
+  max-width:100%;
 }
 
 .logo-card p{
   color:#123b5d;
+  margin-top:12px;
   font-weight:bold;
-  margin-top:10px;
 }
 
-/* COMMON */
-.content-section{
-  min-height:650px;
-  padding:65px 0;
-  background:#f4f7fb;
+
+/* COMMON SECTION */
+
+.page{
+  display:none;
+  padding:70px 0;
+  min-height:70vh;
+}
+
+.page:target{
+  display:block;
+}
+
+#home:target{
+  display:block;
+}
+
+#home:not(:target){
+  display:none;
 }
 
 .section-heading{
   text-align:center;
-  margin-bottom:35px;
+  margin-bottom:40px;
 }
 
 .section-heading span{
-  color:#08739f;
+  color:#176b8f;
   font-size:13px;
-  font-weight:bold;
   letter-spacing:2px;
 }
 
 .section-heading h2{
   color:#123b5d;
-  font-size:34px;
+  font-size:32px;
+  margin-top:5px;
 }
 
-.info-card{
+
+/* ABOUT */
+
+.about-box{
   background:white;
   padding:35px;
   border-radius:15px;
   box-shadow:0 5px 20px rgba(0,0,0,.07);
+  margin-bottom:25px;
 }
 
-.info-card h3{
+.about-box h3{
   color:#123b5d;
   margin-bottom:10px;
-  margin-top:20px;
 }
 
-.info-card h3:first-child{
-  margin-top:0;
-}
 
-/* FEATURES */
-.feature-grid{
+/* QUICK CARDS */
+
+.quick-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:18px;
-  margin-top:25px;
+  margin:40px 0;
 }
 
-.feature-card{
-  background:#f1f7fa;
-  padding:20px;
+.quick-card{
+  background:white;
+  padding:25px 15px;
   text-align:center;
-  border-radius:12px;
+  border-radius:15px;
+  box-shadow:0 5px 18px rgba(0,0,0,.07);
 }
 
-.feature-card span{
+.quick-card .icon{
   font-size:35px;
+  display:block;
 }
 
-.feature-card h4{
+.quick-card h3{
   color:#123b5d;
 }
 
-/* CLASSES */
+
+/* ACADEMIC */
+
 .class-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:15px;
-  margin:20px 0 30px;
+  gap:20px;
 }
 
 .class-card{
-  background:#eaf4f9;
-  color:#123b5d;
-  padding:17px;
-  text-align:center;
-  border-radius:10px;
-  font-weight:bold;
+  background:white;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 5px 18px rgba(0,0,0,.07);
 }
 
+.class-card h3{
+  color:#123b5d;
+  margin-bottom:8px;
+}
+
+
 /* TEACHERS */
+
 .teacher-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -299,71 +324,110 @@ a{
 
 .teacher-card{
   background:white;
-  padding:25px 15px;
-  text-align:center;
+  padding:25px;
   border-radius:15px;
-  box-shadow:0 5px 20px rgba(0,0,0,.08);
+  text-align:center;
+  box-shadow:0 5px 18px rgba(0,0,0,.08);
+  transition:.3s;
+}
+
+.teacher-card:hover{
+  transform:translateY(-5px);
 }
 
 .teacher-icon{
-  font-size:45px;
+  width:65px;
+  height:65px;
+  margin:auto;
+  border-radius:50%;
+  background:#e8f2f7;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:30px;
 }
 
 .teacher-card h3{
+  margin-top:12px;
   color:#123b5d;
-  margin:8px 0 3px;
 }
 
 .teacher-card p{
-  color:#667085;
+  color:#666;
 }
+
 
 /* NOTICE */
+
+.notice-list{
+  display:grid;
+  gap:15px;
+}
+
 .notice-card{
   background:white;
-  padding:30px;
-  border-left:5px solid #123b5d;
-  border-radius:12px;
-  box-shadow:0 5px 20px rgba(0,0,0,.08);
+  padding:20px;
+  border-left:5px solid #176b8f;
+  border-radius:8px;
+  box-shadow:0 4px 15px rgba(0,0,0,.06);
 }
 
-.notice-date{
-  color:#08739f;
-  font-weight:bold;
+.notice-card h3{
+  color:#123b5d;
 }
+
 
 /* GALLERY */
+
 .gallery-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:20px;
+  gap:25px;
 }
 
 .gallery-item{
   background:white;
-  padding:10px;
-  border-radius:12px;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 6px 20px rgba(0,0,0,.1);
+  transition:.3s;
+}
+
+.gallery-item:hover{
+  transform:translateY(-5px);
 }
 
 .gallery-item img{
   width:100%;
   height:250px;
-  object-fit:contain;
+  object-fit:cover;
+  display:block;
+  cursor:pointer;
 }
 
+.gallery-caption{
+  padding:14px;
+  text-align:center;
+  font-weight:bold;
+  color:#123b5d;
+}
+
+
 /* CONTACT */
+
 .contact-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:20px;
+  margin-bottom:35px;
 }
 
 .contact-card{
   background:white;
-  padding:30px;
+  padding:25px;
   text-align:center;
   border-radius:15px;
-  box-shadow:0 5px 20px rgba(0,0,0,.07);
+  box-shadow:0 5px 18px rgba(0,0,0,.07);
 }
 
 .contact-card span{
@@ -372,45 +436,88 @@ a{
 
 .contact-card h3{
   color:#123b5d;
+  margin:8px 0;
 }
 
+.contact-card a{
+  color:#176b8f;
+  font-weight:bold;
+  word-break:break-word;
+}
+
+
+/* MAP */
+
+.map-box{
+  background:white;
+  padding:15px;
+  border-radius:15px;
+  box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.map-box h3{
+  color:#123b5d;
+  text-align:center;
+  margin-bottom:15px;
+}
+
+.map-box iframe{
+  width:100%;
+  height:400px;
+  border:0;
+  border-radius:10px;
+}
+
+
+/* IMAGE VIEWER */
+
+.image-viewer{
+  display:none;
+  position:fixed;
+  z-index:9999;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,.92);
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.image-viewer img{
+  max-width:95%;
+  max-height:90%;
+  object-fit:contain;
+  border-radius:10px;
+}
+
+.close-image{
+  position:absolute;
+  top:10px;
+  right:25px;
+  color:white;
+  font-size:50px;
+  cursor:pointer;
+}
+
+
 /* FOOTER */
-.footer{
+
+footer{
   background:#123b5d;
   color:white;
   text-align:center;
-  padding:35px 0;
+  padding:25px 10px;
 }
 
-.footer-logo{
-  width:75px;
-  height:75px;
-  object-fit:contain;
-}
-
-.footer h3{
-  margin-top:8px;
-}
-
-.copyright{
-  margin-top:12px;
-  font-size:13px;
-}
 
 /* MOBILE */
-@media(max-width:850px){
 
-  .topbar .container{
-    flex-direction:column;
-    text-align:center;
-  }
+@media(max-width:900px){
 
   .menu-btn{
     display:block;
-  }
-
-  .nav-inner{
-    position:relative;
   }
 
   .nav-links{
@@ -418,24 +525,24 @@ a{
     position:absolute;
     left:0;
     right:0;
-    top:76px;
+    top:75px;
     background:white;
+    padding:15px;
     flex-direction:column;
-    align-items:stretch;
-    padding:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,.12);
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
   }
 
-  .nav-links.open{
+  .nav-links.active{
     display:flex;
   }
 
   .nav-links a{
-    padding:12px;
+    width:100%;
+    text-align:center;
   }
 
   .hero-content{
-    flex-direction:column;
+    grid-template-columns:1fr;
     text-align:center;
   }
 
@@ -443,108 +550,109 @@ a{
     font-size:32px;
   }
 
-  .hero-buttons{
-    justify-content:center;
-  }
-
-  .feature-grid{
+  .quick-grid{
     grid-template-columns:repeat(2,1fr);
   }
 
-  .teacher-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
+  .class-grid,
+  .teacher-grid,
   .contact-grid{
-    grid-template-columns:1fr;
+    grid-template-columns:repeat(2,1fr);
   }
 
   .gallery-grid{
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(2,1fr);
   }
+
 }
 
-@media(max-width:550px){
 
-  .brand strong{
-    font-size:15px;
+@media(max-width:600px){
+
+  .topbar .container{
+    flex-direction:column;
+    text-align:center;
   }
 
-  .brand img{
-    width:45px;
-    height:45px;
+  .quick-grid,
+  .class-grid,
+  .teacher-grid,
+  .contact-grid,
+  .gallery-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    padding:55px 0;
   }
 
   .hero h1{
     font-size:28px;
   }
 
-  .hero p{
-    font-size:16px;
+  .section-heading h2{
+    font-size:27px;
   }
 
-  .feature-grid,
-  .teacher-grid,
-  .class-grid,
-  .gallery-grid{
-    grid-template-columns:1fr;
+  .gallery-item img{
+    height:230px;
   }
 
-  .info-card{
-    padding:22px;
-  }
 }
+
 </style>
 </head>
 
+
 <body>
 
+
 <!-- TOP BAR -->
+
 <header class="topbar">
   <div class="container">
     <span>📍 যশোর, বাংলাদেশ</span>
-    <span>🎓 শিক্ষা • প্রশিক্ষণ • শৃঙ্খলা • মানবিকতা</span>
+    <span>🎓 শিক্ষা • শৃঙ্খলা • মানবিকতা</span>
   </div>
 </header>
 
 
-<!-- NAVBAR -->
+<!-- NAVIGATION -->
+
 <nav class="navbar">
 
   <div class="container nav-inner">
 
-    <a href="#home" class="brand">
-
+    <a class="brand" href="#home">
       <img src="logo.jpg" alt="প্রিজন্স পাবলিক স্কুলের লোগো">
 
       <div>
         <strong>প্রিজন্স পাবলিক স্কুল</strong>
         <small>যশোর</small>
       </div>
-
     </a>
 
 
-    <button class="menu-btn" onclick="document.getElementById('navLinks').classList.toggle('open')">
+    <button class="menu-btn" onclick="toggleMenu()">
       ☰
     </button>
 
 
     <div class="nav-links" id="navLinks">
 
-      <a href="#home">🏠 হোম</a>
+      <a href="#home" onclick="closeMenu()">🏠 হোম</a>
 
-      <a href="#about">ℹ️ আমাদের সম্পর্কে</a>
+      <a href="#about" onclick="closeMenu()">ℹ️ আমাদের সম্পর্কে</a>
 
-      <a href="#academic">📚 শিক্ষাব্যবস্থা</a>
+      <a href="#academic" onclick="closeMenu()">📚 শিক্ষাব্যবস্থা</a>
 
-      <a href="#teachers">👨‍🏫 শিক্ষকমণ্ডলী</a>
+      <a href="#teachers" onclick="closeMenu()">👨‍🏫 শিক্ষকমণ্ডলী</a>
 
-      <a href="#notice">📢 নোটিশ</a>
+      <a href="#notice" onclick="closeMenu()">📢 নোটিশ</a>
 
-      <a href="#gallery">🖼️ গ্যালারি</a>
+      <a href="#gallery" onclick="closeMenu()">🖼️ গ্যালারি</a>
 
-      <a href="#contact">☎️ যোগাযোগ</a>
+      <a href="#contact" onclick="closeMenu()">☎️ যোগাযোগ</a>
 
     </div>
 
@@ -553,53 +661,57 @@ a{
 </nav>
 
 
+
 <main>
 
 
 <!-- HOME -->
-<section id="home" class="page">
 
-  <div class="hero">
+<section id="home" class="page hero">
 
-    <div class="container hero-content">
+  <div class="container hero-content">
 
-      <div class="hero-text">
+    <div class="hero-text">
 
-        <span class="eyebrow">WELCOME TO</span>
+      <span class="eyebrow">WELCOME TO</span>
 
-        <h1>প্রিজন্স পাবলিক স্কুল, যশোর</h1>
+      <h1>
+        প্রিজন্স পাবলিক স্কুল, যশোর
+      </h1>
 
-        <p>
-          জ্ঞান, প্রশিক্ষণ, শৃঙ্খলা ও মানবিক মূল্যবোধের
-          সমন্বয়ে একটি সুন্দর ভবিষ্যৎ গড়ার প্রত্যয়।
-        </p>
+      <p>
+        জ্ঞান, শৃঙ্খলা ও মানবিক মূল্যবোধের সমন্বয়ে
+        একটি সুন্দর ভবিষ্যৎ গড়ার প্রত্যয়।
+      </p>
 
-        <div class="hero-buttons">
 
-          <a class="btn primary" href="#about">
-            স্কুল সম্পর্কে জানুন
-          </a>
+      <div class="hero-buttons">
 
-          <a class="btn outline" href="#notice">
-            নোটিশ দেখুন
-          </a>
+        <a class="btn primary" href="#about">
+          স্কুল সম্পর্কে জানুন
+        </a>
 
-        </div>
+        <a class="btn outline" href="#notice">
+          নোটিশ দেখুন
+        </a>
 
       </div>
 
+    </div>
 
-      <div>
 
-        <div class="logo-card">
+    <div class="hero-logo">
 
-          <img src="logo.jpg" alt="স্কুলের লোগো">
+      <div class="logo-card">
 
-          <p>
-            “শিক্ষা • প্রশিক্ষণ • শৃঙ্খলা • মানবিকতা”
-          </p>
+        <img
+          src="logo.jpg"
+          alt="প্রিজন্স পাবলিক স্কুলের লোগো"
+        >
 
-        </div>
+        <p>
+          “শিক্ষাই শক্তি, মানবতাই সৌন্দর্য”
+        </p>
 
       </div>
 
@@ -610,105 +722,127 @@ a{
 </section>
 
 
+
 <!-- ABOUT -->
-<section id="about" class="page content-section">
+
+<section id="about" class="page">
 
   <div class="container">
 
     <div class="section-heading">
-      <span>ABOUT US</span>
+
+      <span>ABOUT OUR SCHOOL</span>
+
       <h2>ℹ️ আমাদের সম্পর্কে</h2>
+
     </div>
 
-    <div class="info-card">
+
+    <div class="about-box">
 
       <h3>প্রিজন্স পাবলিক স্কুল, যশোর</h3>
 
       <p>
-        প্রিজন্স পাবলিক স্কুল, যশোর একটি শিক্ষামূলক
-        প্রতিষ্ঠান। এখানে শিক্ষার্থীদের জ্ঞানার্জনের
-        পাশাপাশি শৃঙ্খলা, প্রশিক্ষণ, নৈতিকতা ও
-        মানবিক মূল্যবোধ বিকাশের ওপর গুরুত্ব দেওয়া হয়।
+        প্রিজন্স পাবলিক স্কুল, যশোর একটি
+        শিক্ষাবান্ধব প্রতিষ্ঠান। শিক্ষার্থীদের
+        জ্ঞানার্জনের পাশাপাশি শৃঙ্খলা,
+        নৈতিকতা, মানবিকতা ও দেশপ্রেমের
+        চেতনায় গড়ে তোলাই আমাদের লক্ষ্য।
       </p>
+
+    </div>
+
+
+    <div class="about-box">
+
+      <h3>🎯 আমাদের লক্ষ্য</h3>
 
       <p>
-        আমাদের লক্ষ্য হলো শিক্ষার্থীদের জ্ঞানী,
-        দায়িত্বশীল, সুশৃঙ্খল ও মানবিক মানুষ হিসেবে
-        গড়ে তোলা।
+        প্রতিটি শিক্ষার্থীকে সুশিক্ষায় শিক্ষিত করে
+        ভবিষ্যতের জন্য যোগ্য, দায়িত্বশীল ও
+        মানবিক নাগরিক হিসেবে গড়ে তোলা।
       </p>
 
-      <h3>আমাদের মূলনীতি</h3>
+    </div>
 
-      <div class="feature-grid">
 
-        <div class="feature-card">
-          <span>📚</span>
-          <h4>শিক্ষা</h4>
-          <p>মানসম্মত শিক্ষার মাধ্যমে জ্ঞান অর্জন।</p>
-        </div>
+    <div class="about-box">
 
-        <div class="feature-card">
-          <span>🎯</span>
-          <h4>প্রশিক্ষণ</h4>
-          <p>দক্ষতা ও আত্মবিশ্বাস বৃদ্ধির জন্য প্রশিক্ষণ।</p>
-        </div>
+      <h3>🌱 আমাদের মূলনীতি</h3>
 
-        <div class="feature-card">
-          <span>🫡</span>
-          <h4>শৃঙ্খলা</h4>
-          <p>সুশৃঙ্খল জীবনযাপনের অভ্যাস গড়ে তোলা।</p>
-        </div>
-
-        <div class="feature-card">
-          <span>❤️</span>
-          <h4>মানবিকতা</h4>
-          <p>মানবিক মূল্যবোধ ও সহমর্মিতা বিকাশ।</p>
-        </div>
-
-      </div>
+      <p>
+        শিক্ষা • শৃঙ্খলা • মানবিকতা
+      </p>
 
     </div>
 
   </div>
 
 </section>
+
 
 
 <!-- ACADEMIC -->
-<section id="academic" class="page content-section">
+
+<section id="academic" class="page">
 
   <div class="container">
 
     <div class="section-heading">
-      <span>ACADEMIC</span>
+
+      <span>ACADEMIC INFORMATION</span>
+
       <h2>📚 শিক্ষাব্যবস্থা</h2>
+
     </div>
 
-    <div class="info-card">
 
-      <h3>আমাদের শ্রেণিসমূহ</h3>
+    <div class="class-grid">
 
-      <div class="class-grid">
-
-        <div class="class-card">শিশু</div>
-        <div class="class-card">ওয়ান</div>
-        <div class="class-card">টু</div>
-        <div class="class-card">থ্রী</div>
-        <div class="class-card">ফোর</div>
-        <div class="class-card">ফাইভ</div>
-        <div class="class-card">সিক্স</div>
-        <div class="class-card">সেভেন</div>
-        <div class="class-card">এইট</div>
-
+      <div class="class-card">
+        <h3>শিশু</h3>
+        <p>বাংলা, ইংরেজি ও অংক</p>
       </div>
 
-      <h3>শিক্ষা কার্যক্রম</h3>
+      <div class="class-card">
+        <h3>ওয়ান</h3>
+        <p>বাংলা, ইংরেজি ও অংক</p>
+      </div>
 
-      <p>
-        শিক্ষার্থীদের বয়স ও শ্রেণি অনুযায়ী পাঠদান,
-        অনুশীলন, মূল্যায়ন ও বিভিন্ন শিক্ষামূলক
-        কার্যক্রম পরিচালনা করা হয়।
-      </p>
+      <div class="class-card">
+        <h3>টু</h3>
+        <p>বাংলা, ইংরেজি ও অংক</p>
+      </div>
+
+      <div class="class-card">
+        <h3>থ্রী</h3>
+        <p>বাংলা, ইংরেজি, অংক, বিজ্ঞান ও অন্যান্য বিষয়</p>
+      </div>
+
+      <div class="class-card">
+        <h3>ফোর</h3>
+        <p>বাংলা, ইংরেজি, অংক, বিজ্ঞান ও অন্যান্য বিষয়</p>
+      </div>
+
+      <div class="class-card">
+        <h3>ফাইভ</h3>
+        <p>বাংলা, ইংরেজি, অংক, বিজ্ঞান ও অন্যান্য বিষয়</p>
+      </div>
+
+      <div class="class-card">
+        <h3>সিক্স</h3>
+        <p>বাংলা, ইংরেজি, অংক, বিজ্ঞান ও অন্যান্য বিষয়</p>
+      </div>
+
+      <div class="class-card">
+        <h3>সেভেন</h3>
+        <p>বাংলা, ইংরেজি, অংক, বিজ্ঞান ও অন্যান্য বিষয়</p>
+      </div>
+
+      <div class="class-card">
+        <h3>এইট</h3>
+        <p>বাংলা, ইংরেজি, অংক, বিজ্ঞান ও অন্যান্য বিষয়</p>
+      </div>
 
     </div>
 
@@ -717,18 +851,24 @@ a{
 </section>
 
 
+
 <!-- TEACHERS -->
-<section id="teachers" class="page content-section">
+
+<section id="teachers" class="page">
 
   <div class="container">
 
     <div class="section-heading">
+
       <span>OUR TEACHERS</span>
+
       <h2>👨‍🏫 শিক্ষকমণ্ডলী</h2>
+
     </div>
 
 
     <div class="teacher-grid">
+
 
       <div class="teacher-card">
         <div class="teacher-icon">👨‍🏫</div>
@@ -736,11 +876,13 @@ a{
         <p>বাংলা ও ধর্ম</p>
       </div>
 
+
       <div class="teacher-card">
         <div class="teacher-icon">👨‍🏫</div>
         <h3>মামুনুর রশিদ</h3>
         <p>বিজ্ঞান</p>
       </div>
+
 
       <div class="teacher-card">
         <div class="teacher-icon">👨‍🏫</div>
@@ -748,11 +890,13 @@ a{
         <p>ইংরেজি</p>
       </div>
 
+
       <div class="teacher-card">
         <div class="teacher-icon">👨‍🏫</div>
         <h3>আকাশ উদ্দীন</h3>
         <p>গণিত</p>
       </div>
+
 
       <div class="teacher-card">
         <div class="teacher-icon">👨‍🏫</div>
@@ -760,11 +904,13 @@ a{
         <p>বা.ও.বি</p>
       </div>
 
+
       <div class="teacher-card">
         <div class="teacher-icon">👨‍🏫</div>
         <h3>পলাশ দাশ</h3>
         <p>বা.ও.বি ও বাংলা</p>
       </div>
+
 
       <div class="teacher-card">
         <div class="teacher-icon">👨‍🏫</div>
@@ -772,11 +918,13 @@ a{
         <p>বিজ্ঞান</p>
       </div>
 
+
       <div class="teacher-card">
         <div class="teacher-icon">👩‍🏫</div>
         <h3>ম্যাডাম</h3>
         <p>গণিত, বিজ্ঞান ও বাংলা</p>
       </div>
+
 
       <div class="teacher-card">
         <div class="teacher-icon">👨‍🏫</div>
@@ -784,101 +932,256 @@ a{
         <p>বা.ও.বি</p>
       </div>
 
+
       <div class="teacher-card">
         <div class="teacher-icon">👨‍🏫</div>
         <h3>সাধন স্যার</h3>
         <p>বাংলা</p>
       </div>
 
+
     </div>
 
   </div>
 
 </section>
+
 
 
 <!-- NOTICE -->
-<section id="notice" class="page content-section">
+
+<section id="notice" class="page">
 
   <div class="container">
 
     <div class="section-heading">
-      <span>NOTICE BOARD</span>
+
+      <span>SCHOOL NOTICE</span>
+
       <h2>📢 নোটিশ</h2>
+
     </div>
 
-    <div class="notice-card">
 
-      <div class="notice-date">📅 গুরুত্বপূর্ণ</div>
+    <div class="notice-list">
 
-      <h3>স্কুলের নোটিশ</h3>
+      <div class="notice-card">
 
-      <p>
-        নতুন নোটিশ প্রকাশিত হলে এখানে তা প্রকাশ করা হবে।
-      </p>
+        <h3>📢 গুরুত্বপূর্ণ নোটিশ</h3>
+
+        <p>
+          বিদ্যালয়ের সকল শিক্ষার্থী ও অভিভাবকদের
+          নিয়মিত নোটিশ অনুসরণ করার জন্য অনুরোধ করা হলো।
+        </p>
+
+      </div>
+
+
+      <div class="notice-card">
+
+        <h3>📚 শিক্ষার্থীদের জন্য</h3>
+
+        <p>
+          নিয়মিত বিদ্যালয়ে উপস্থিত হয়ে পড়াশোনায়
+          মনোযোগ দেওয়ার জন্য সকল শিক্ষার্থীকে
+          নির্দেশনা দেওয়া হলো।
+        </p>
+
+      </div>
+
+
+      <div class="notice-card">
+
+        <h3>🏫 বিদ্যালয় সংক্রান্ত</h3>
+
+        <p>
+          নতুন কোনো নোটিশ প্রকাশিত হলে এখানে
+          তা যুক্ত করা হবে।
+        </p>
+
+      </div>
 
     </div>
 
   </div>
 
 </section>
+
 
 
 <!-- GALLERY -->
-<section id="gallery" class="page content-section">
+
+<section id="gallery" class="page">
 
   <div class="container">
 
     <div class="section-heading">
+
       <span>PHOTO GALLERY</span>
-      <h2>🖼️ গ্যালারি</h2>
+
+      <h2>🖼️ ফটো গ্যালারি</h2>
+
     </div>
+
 
     <div class="gallery-grid">
 
+
       <div class="gallery-item">
-        <img src="logo.jpg" alt="প্রিজন্স পাবলিক স্কুল">
+
+        <img
+          src="school.jpg"
+          alt="প্রিজন্স পাবলিক স্কুলের ক্যাম্পাস"
+          onclick="openImage(this.src)"
+        >
+
+        <div class="gallery-caption">
+          🏫 স্কুল ক্যাম্পাস
+        </div>
+
       </div>
 
-    </div>
 
-    <p style="text-align:center;margin-top:20px;">
-      স্কুলের বিভিন্ন কার্যক্রমের ছবি এখানে প্রকাশ করা হবে।
-    </p>
+      <div class="gallery-item">
+
+        <img
+          src="students.jpg"
+          alt="প্রিজন্স পাবলিক স্কুলের শিক্ষার্থীরা"
+          onclick="openImage(this.src)"
+        >
+
+        <div class="gallery-caption">
+          👨‍🎓 শিক্ষার্থীদের কার্যক্রম
+        </div>
+
+      </div>
+
+
+      <div class="gallery-item">
+
+        <img
+          src="classroom.jpg"
+          alt="প্রিজন্স পাবলিক স্কুলের শ্রেণিকক্ষ"
+          onclick="openImage(this.src)"
+        >
+
+        <div class="gallery-caption">
+          📚 শ্রেণিকক্ষ
+        </div>
+
+      </div>
+
+
+    </div>
 
   </div>
 
 </section>
 
 
+
 <!-- CONTACT -->
-<section id="contact" class="page content-section">
+
+<section id="contact" class="page">
 
   <div class="container">
 
     <div class="section-heading">
+
       <span>CONTACT US</span>
+
       <h2>☎️ যোগাযোগ</h2>
+
     </div>
+
 
     <div class="contact-grid">
 
+
+      <!-- ADDRESS -->
+
       <div class="contact-card">
+
         <span>📍</span>
+
         <h3>ঠিকানা</h3>
-        <p>যশোর, বাংলাদেশ</p>
+
+        <p>
+          যশোর কেন্দ্রীয় কারাগার, যশোর
+        </p>
+
       </div>
 
+
+      <!-- PHONE -->
+
       <div class="contact-card">
+
         <span>📞</span>
+
         <h3>মোবাইল</h3>
-        <p>০১XXXXXXXXX</p>
+
+        <p>
+
+          <a href="tel:+8801603292211">
+            +8801603292211
+          </a>
+
+        </p>
+
       </div>
 
+
+      <!-- EMAIL -->
+
       <div class="contact-card">
+
         <span>✉️</span>
+
         <h3>ই-মেইল</h3>
-        <p>school@example.com</p>
+
+        <p>
+
+          <a href="mailto:prisonspublic1979@gmail.com">
+            prisonspublic1979@gmail.com
+          </a>
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- GOOGLE MAP -->
+
+    <div class="map-box">
+
+      <h3>
+        📍 আমাদের অবস্থান
+      </h3>
+
+
+      <iframe
+        src="https://www.google.com/maps?q=Jashore%20Central%20Jail%2C%20Jashore%2C%20Bangladesh&output=embed"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+
+
+      <div style="text-align:center;margin-top:15px;">
+
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=Jashore+Central+Jail+Jashore+Bangladesh"
+          target="_blank"
+          class="btn"
+          style="background:#123b5d;color:white;">
+          🗺️ Google Maps-এ লোকেশন দেখুন
+        </a>
+
       </div>
 
     </div>
@@ -886,34 +1189,111 @@ a{
   </div>
 
 </section>
+
 
 </main>
 
 
+
 <!-- FOOTER -->
-<footer class="footer">
 
-  <div class="container">
+<footer>
 
-    <img
-      src="logo.jpg"
-      alt="স্কুলের লোগো"
-      class="footer-logo"
-    >
+  <p>
+    © 2026 প্রিজন্স পাবলিক স্কুল, যশোর
+  </p>
 
-    <h3>প্রিজন্স পাবলিক স্কুল, যশোর</h3>
-
-    <p>
-      শিক্ষা • প্রশিক্ষণ • শৃঙ্খলা • মানবিকতা
-    </p>
-
-    <p class="copyright">
-      © 2026 প্রিজন্স পাবলিক স্কুল, যশোর
-    </p>
-
-  </div>
+  <p>
+    শিক্ষা • শৃঙ্খলা • মানবিকতা
+  </p>
 
 </footer>
+
+
+
+<!-- IMAGE VIEWER -->
+
+<div
+  id="imageViewer"
+  class="image-viewer"
+  onclick="closeImage()"
+>
+
+  <span class="close-image">
+    &times;
+  </span>
+
+  <img
+    id="largeImage"
+    src=""
+    alt="বড় ছবি"
+  >
+
+</div>
+
+
+
+<script>
+
+/* MOBILE MENU */
+
+function toggleMenu(){
+
+  document
+    .getElementById("navLinks")
+    .classList
+    .toggle("active");
+
+}
+
+
+function closeMenu(){
+
+  document
+    .getElementById("navLinks")
+    .classList
+    .remove("active");
+
+}
+
+
+/* GALLERY IMAGE */
+
+function openImage(imageSrc){
+
+  document
+    .getElementById("largeImage")
+    .src = imageSrc;
+
+  document
+    .getElementById("imageViewer")
+    .style
+    .display = "flex";
+
+}
+
+
+function closeImage(){
+
+  document
+    .getElementById("imageViewer")
+    .style
+    .display = "none";
+
+}
+
+
+/* ESC KEY */
+
+document.addEventListener("keydown", function(event){
+
+  if(event.key === "Escape"){
+    closeImage();
+  }
+
+});
+
+</script>
 
 
 </body>
