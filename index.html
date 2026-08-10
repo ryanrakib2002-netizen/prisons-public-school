@@ -1,66 +1,670 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="প্রিজন্স পাবলিক স্কুল, যশোর - শিক্ষা, প্রশিক্ষণ, শৃঙ্খলা ও মানবিক মূল্যবোধের সমন্বয়ে একটি সুন্দর ভবিষ্যৎ গড়ার প্রত্যয়।">
+<title>প্রিজন্স পাবলিক স্কুল, যশোর</title>
 
-  <title>প্রিজন্স পাবলিক স্কুল, যশোর</title>
+<style>
 
-  <link rel="stylesheet" href="style.css">
+/* =========================
+   BASIC
+========================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Sans Bengali", "SolaimanLipi", Arial, sans-serif;
+  background: #f4f7fb;
+  color: #1d2939;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 92%;
+  max-width: 1150px;
+  margin: auto;
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar {
+  background: #123b5d;
+  color: white;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.topbar .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  background: white;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-inner {
+  min-height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+}
+
+.brand strong {
+  display: block;
+  font-size: 18px;
+  color: #123b5d;
+}
+
+.brand small {
+  color: #667085;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-links a {
+  padding: 9px 11px;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  background: #eaf3f9;
+  color: #0b628f;
+}
+
+.menu-btn {
+  display: none;
+  border: none;
+  background: #123b5d;
+  color: white;
+  font-size: 24px;
+  padding: 5px 10px;
+  border-radius: 7px;
+}
+
+
+/* =========================
+   PAGE SYSTEM
+========================= */
+
+.page {
+  display: none;
+  min-height: calc(100vh - 150px);
+}
+
+.page.active {
+  display: block;
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+.hero {
+  background: linear-gradient(135deg, #eaf5fb, #ffffff);
+  padding: 80px 0;
+}
+
+.hero-content {
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.hero-text {
+  max-width: 650px;
+}
+
+.eyebrow {
+  display: inline-block;
+  color: #0b719e;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: 45px;
+  line-height: 1.3;
+  color: #123b5d;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 19px;
+  color: #475467;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.primary {
+  background: #123b5d;
+  color: white;
+}
+
+.outline {
+  border: 2px solid #123b5d;
+  color: #123b5d;
+}
+
+.hero-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+  text-align: center;
+}
+
+.logo-card img {
+  width: 230px;
+  height: 230px;
+  object-fit: contain;
+}
+
+.logo-card p {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #123b5d;
+}
+
+
+/* =========================
+   COMMON SECTION
+========================= */
+
+.content-section {
+  padding: 70px 0;
+  background: #f4f7fb;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-heading span {
+  color: #0b719e;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.section-heading h2 {
+  font-size: 34px;
+  color: #123b5d;
+  margin-top: 5px;
+}
+
+.info-card {
+  background: white;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+}
+
+.info-card h3 {
+  color: #123b5d;
+  margin: 20px 0 10px;
+}
+
+.info-card h3:first-child {
+  margin-top: 0;
+}
+
+
+/* =========================
+   FEATURE
+========================= */
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.feature-card {
+  background: #f5f9fc;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.feature-card span {
+  font-size: 35px;
+}
+
+.feature-card h4 {
+  color: #123b5d;
+  margin: 8px 0;
+}
+
+
+/* =========================
+   CLASS
+========================= */
+
+.class-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 20px 0 35px;
+}
+
+.class-card {
+  background: #edf6fb;
+  color: #123b5d;
+  padding: 18px;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+
+/* =========================
+   TEACHERS
+========================= */
+
+.teacher-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.teacher-card {
+  background: white;
+  padding: 25px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+  transition: 0.3s;
+}
+
+.teacher-card:hover {
+  transform: translateY(-5px);
+}
+
+.teacher-icon {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+.teacher-card h3 {
+  color: #123b5d;
+  margin-bottom: 5px;
+}
+
+.teacher-card p {
+  color: #667085;
+}
+
+
+/* =========================
+   NOTICE
+========================= */
+
+.notice-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+  border-left: 5px solid #123b5d;
+}
+
+.notice-date {
+  color: #0b719e;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.gallery-item {
+  background: white;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.gallery-note {
+  text-align: center;
+  margin-top: 20px;
+  color: #667085;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.contact-card {
+  background: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+}
+
+.contact-card span {
+  font-size: 35px;
+}
+
+.contact-card h3 {
+  color: #123b5d;
+  margin: 10px 0 5px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  background: #123b5d;
+  color: white;
+  text-align: center;
+  padding: 35px 0;
+}
+
+.footer-logo {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.footer h3 {
+  margin-bottom: 5px;
+}
+
+.footer p {
+  opacity: 0.9;
+}
+
+.copyright {
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 850px) {
+
+  .topbar .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-inner {
+    position: relative;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 10px;
+    flex-direction: column;
+    align-items: stretch;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 12px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 0;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .teacher-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+@media (max-width: 550px) {
+
+  .brand strong {
+    font-size: 15px;
+  }
+
+  .brand img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .feature-grid,
+  .teacher-grid,
+  .class-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-card {
+    padding: 22px;
+  }
+
+}
+
+</style>
 </head>
+
 
 <body>
 
-<!-- ================= TOP BAR ================= -->
+
+<!-- TOP BAR -->
 
 <header class="topbar">
+
   <div class="container">
+
     <span>📍 যশোর, বাংলাদেশ</span>
+
     <span>🎓 শিক্ষা • প্রশিক্ষণ • শৃঙ্খলা • মানবিকতা</span>
+
   </div>
+
 </header>
 
 
-<!-- ================= NAVBAR ================= -->
+
+<!-- NAVIGATION -->
 
 <nav class="navbar">
+
   <div class="container nav-inner">
 
-    <a class="brand" href="#home">
+    <a href="#home" class="brand">
+
       <img src="logo.jpg" alt="প্রিজন্স পাবলিক স্কুলের লোগো">
 
       <div>
+
         <strong>প্রিজন্স পাবলিক স্কুল</strong>
+
         <small>যশোর</small>
+
       </div>
+
     </a>
 
-    <button class="menu-btn" aria-label="মেনু">
+
+    <button class="menu-btn" onclick="toggleMenu()">
       ☰
     </button>
 
-    <div class="nav-links">
 
-      <a href="#home">🏠 হোম</a>
+    <div class="nav-links" id="navLinks">
 
-      <a href="#about">ℹ️ আমাদের সম্পর্কে</a>
+      <a href="#home" onclick="showPage('home')">
+        🏠 হোম
+      </a>
 
-      <a href="#academic">📚 শিক্ষাব্যবস্থা</a>
+      <a href="#about" onclick="showPage('about')">
+        ℹ️ আমাদের সম্পর্কে
+      </a>
 
-      <a href="#teachers">👨‍🏫 শিক্ষকমণ্ডলী</a>
+      <a href="#academic" onclick="showPage('academic')">
+        📚 শিক্ষাব্যবস্থা
+      </a>
 
-      <a href="#notice">📢 নোটিশ</a>
+      <a href="#teachers" onclick="showPage('teachers')">
+        👨‍🏫 শিক্ষকমণ্ডলী
+      </a>
 
-      <a href="#gallery">🖼️ গ্যালারি</a>
+      <a href="#notice" onclick="showPage('notice')">
+        📢 নোটিশ
+      </a>
 
-      <a href="#contact">☎️ যোগাযোগ</a>
+      <a href="#gallery" onclick="showPage('gallery')">
+        🖼️ গ্যালারি
+      </a>
+
+      <a href="#contact" onclick="showPage('contact')">
+        ☎️ যোগাযোগ
+      </a>
 
     </div>
 
   </div>
+
 </nav>
+
 
 
 <!-- ================= MAIN ================= -->
@@ -68,54 +672,55 @@
 <main>
 
 
-<!-- ================= HOME ================= -->
+<!-- HOME -->
 
-<section id="home" class="page hero">
+<section id="home" class="page">
 
-  <div class="container hero-content">
+  <div class="hero">
 
-    <div class="hero-text">
+    <div class="container hero-content">
 
-      <span class="eyebrow">
-        WELCOME TO
-      </span>
+      <div class="hero-text">
 
-      <h1>
-        প্রিজন্স পাবলিক স্কুল, যশোর
-      </h1>
+        <span class="eyebrow">
+          WELCOME TO
+        </span>
 
-      <p>
-        জ্ঞান, প্রশিক্ষণ, শৃঙ্খলা ও মানবিক মূল্যবোধের
-        সমন্বয়ে একটি সুন্দর ভবিষ্যৎ গড়ার প্রত্যয়।
-      </p>
+        <h1>
+          প্রিজন্স পাবলিক স্কুল, যশোর
+        </h1>
 
-      <div class="hero-buttons">
+        <p>
+          জ্ঞান, প্রশিক্ষণ, শৃঙ্খলা ও মানবিক মূল্যবোধের
+          সমন্বয়ে একটি সুন্দর ভবিষ্যৎ গড়ার প্রত্যয়।
+        </p>
 
-        <a class="btn primary" href="#about">
-          স্কুল সম্পর্কে জানুন
-        </a>
+        <div class="hero-buttons">
 
-        <a class="btn outline" href="#notice">
-          নোটিশ দেখুন
-        </a>
+          <a class="btn primary" href="#about" onclick="showPage('about')">
+            স্কুল সম্পর্কে জানুন
+          </a>
+
+          <a class="btn outline" href="#notice" onclick="showPage('notice')">
+            নোটিশ দেখুন
+          </a>
+
+        </div>
 
       </div>
 
-    </div>
 
+      <div class="hero-logo">
 
-    <div class="hero-logo">
+        <div class="logo-card">
 
-      <div class="logo-card">
+          <img src="logo.jpg" alt="স্কুলের লোগো">
 
-        <img
-          src="logo.jpg"
-          alt="প্রিজন্স পাবলিক স্কুলের লোগো"
-        >
+          <p>
+            “শিক্ষা, প্রশিক্ষণ, শৃঙ্খলা ও মানবিকতা”
+          </p>
 
-        <p>
-          “শিক্ষা, প্রশিক্ষণ, শৃঙ্খলা ও মানবিকতা”
-        </p>
+        </div>
 
       </div>
 
@@ -127,7 +732,7 @@
 
 
 
-<!-- ================= ABOUT ================= -->
+<!-- ABOUT -->
 
 <section id="about" class="page content-section">
 
@@ -137,9 +742,7 @@
 
       <span>ABOUT US</span>
 
-      <h2>
-        আমাদের সম্পর্কে
-      </h2>
+      <h2>আমাদের সম্পর্কে</h2>
 
     </div>
 
@@ -159,4 +762,495 @@
       </p>
 
       <p>
-        আমাদের লক্ষ্য
+        আমাদের লক্ষ্য হলো শিক্ষার্থীদের এমনভাবে
+        গড়ে তোলা, যাতে তারা ভবিষ্যতে একজন
+        জ্ঞানী, দায়িত্বশীল, সুশৃঙ্খল ও মানবিক
+        মানুষ হিসেবে সমাজে ভূমিকা রাখতে পারে।
+      </p>
+
+
+      <h3>আমাদের মূলনীতি</h3>
+
+
+      <div class="feature-grid">
+
+        <div class="feature-card">
+          <span>📚</span>
+          <h4>শিক্ষা</h4>
+          <p>মানসম্মত শিক্ষার মাধ্যমে জ্ঞান অর্জন।</p>
+        </div>
+
+        <div class="feature-card">
+          <span>🎯</span>
+          <h4>প্রশিক্ষণ</h4>
+          <p>দক্ষতা ও আত্মবিশ্বাস বৃদ্ধির জন্য প্রশিক্ষণ।</p>
+        </div>
+
+        <div class="feature-card">
+          <span>🫡</span>
+          <h4>শৃঙ্খলা</h4>
+          <p>সুশৃঙ্খল জীবনযাপনের অভ্যাস গড়ে তোলা।</p>
+        </div>
+
+        <div class="feature-card">
+          <span>❤️</span>
+          <h4>মানবিকতা</h4>
+          <p>মানবিক মূল্যবোধ ও সহমর্মিতা বিকাশ।</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ACADEMIC -->
+
+<section id="academic" class="page content-section">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <span>ACADEMIC</span>
+
+      <h2>📚 শিক্ষাব্যবস্থা</h2>
+
+    </div>
+
+
+    <div class="info-card">
+
+      <h3>আমাদের শ্রেণিসমূহ</h3>
+
+
+      <div class="class-grid">
+
+        <div class="class-card">শিশু</div>
+        <div class="class-card">ওয়ান</div>
+        <div class="class-card">টু</div>
+        <div class="class-card">থ্রী</div>
+        <div class="class-card">ফোর</div>
+        <div class="class-card">ফাইভ</div>
+        <div class="class-card">সিক্স</div>
+        <div class="class-card">সেভেন</div>
+        <div class="class-card">এইট</div>
+
+      </div>
+
+
+      <h3>শিক্ষা কার্যক্রম</h3>
+
+      <p>
+        শিক্ষার্থীদের বয়স ও শ্রেণি অনুযায়ী
+        পাঠদান, অনুশীলন, মূল্যায়ন ও বিভিন্ন
+        শিক্ষামূলক কার্যক্রম পরিচালনা করা হয়।
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- TEACHERS -->
+
+<section id="teachers" class="page content-section">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <span>OUR TEACHERS</span>
+
+      <h2>👨‍🏫 শিক্ষকমণ্ডলী</h2>
+
+    </div>
+
+
+    <div class="teacher-grid">
+
+
+      <div class="teacher-card">
+
+        <div class="teacher-icon">👨‍🏫</div>
+
+        <h3>ফজর আলী</h3>
+
+        <p>বাংলা ও ধর্ম</p>
+
+      </div>
+
+
+      <div class="teacher-card">
+
+        <div class="teacher-icon">👨‍🏫</div>
+
+        <h3>মামুনুর রশিদ</h3>
+
+        <p>বিজ্ঞান</p>
+
+      </div>
+
+
+      <div class="teacher-card">
+
+        <div class="teacher-icon">👨‍🏫</div>
+
+        <h3>রাকিব হাসান</h3>
+
+        <p>ইংরেজি</p>
+
+      </div>
+
+
+      <div class="teacher-card">
+
+        <div class="teacher-icon">👨‍🏫</div>
+
+        <h3>আকাশ উদ্দীন</h3>
+
+        <p>গণিত</p>
+
+      </div>
+
+
+      <div class="teacher-card">
+
+        <div class="teacher-icon">👨‍🏫</div>
+
+        <h3>হাফিজুর রহমান হারুন</h3>
+
+        <p>বা.ও.বি</p>
+
+      </div>
+
+
+      <div class="teacher-card">
+
+        <div class="teacher-icon">👨‍🏫</div>
+
+        <h3>পলাশ দাশ</h3>
+
+        <p>বা.ও.বি ও বাংলা</p>
+
+      </div>
+
+
+      <div class="teacher-card">
+
+        <div class="teacher-icon">👨‍🏫</div>
+
+        <h3>শোয়াইব</h3>
+
+        <p>বিজ্ঞান</p>
+
+      </div>
+
+
+      <div class="teacher-card">
+
+        <div class="teacher-icon">👩‍🏫</div>
+
+        <h3>ম্যাডাম</h3>
+
+        <p>গণিত, বিজ্ঞান ও বাংলা</p>
+
+      </div>
+
+
+      <div class="teacher-card">
+
+        <div class="teacher-icon">👨‍🏫</div>
+
+        <h3>রাশেদ স্যার</h3>
+
+        <p>বা.ও.বি</p>
+
+      </div>
+
+
+      <div class="teacher-card">
+
+        <div class="teacher-icon">👨‍🏫</div>
+
+        <h3>সাধন স্যার</h3>
+
+        <p>বাংলা</p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- NOTICE -->
+
+<section id="notice" class="page content-section">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <span>NOTICE BOARD</span>
+
+      <h2>📢 নোটিশ</h2>
+
+    </div>
+
+
+    <div class="notice-card">
+
+      <div class="notice-date">
+        📅 গুরুত্বপূর্ণ
+      </div>
+
+      <h3>
+        স্কুলের নোটিশ
+      </h3>
+
+      <p>
+        নতুন নোটিশ প্রকাশিত হলে এখানে
+        তা যুক্ত করা হবে।
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- GALLERY -->
+
+<section id="gallery" class="page content-section">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <span>PHOTO GALLERY</span>
+
+      <h2>🖼️ গ্যালারি</h2>
+
+    </div>
+
+
+    <div class="gallery-grid">
+
+      <div class="gallery-item">
+
+        <img src="logo.jpg" alt="প্রিজন্স পাবলিক স্কুল">
+
+      </div>
+
+    </div>
+
+
+    <p class="gallery-note">
+      স্কুলের বিভিন্ন কার্যক্রমের ছবি এখানে
+      প্রকাশ করা হবে।
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="page content-section">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <span>CONTACT US</span>
+
+      <h2>☎️ যোগাযোগ</h2>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+
+      <div class="contact-card">
+
+        <span>📍</span>
+
+        <h3>ঠিকানা</h3>
+
+        <p>
+          যশোর, বাংলাদেশ
+        </p>
+
+      </div>
+
+
+      <div class="contact-card">
+
+        <span>📞</span>
+
+        <h3>মোবাইল</h3>
+
+        <p>
+          ০১XXXXXXXXX
+        </p>
+
+      </div>
+
+
+      <div class="contact-card">
+
+        <span>✉️</span>
+
+        <h3>ই-মেইল</h3>
+
+        <p>
+          school@example.com
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+  <div class="container">
+
+    <img
+      src="logo.jpg"
+      alt="স্কুলের লোগো"
+      class="footer-logo"
+    >
+
+    <h3>
+      প্রিজন্স পাবলিক স্কুল, যশোর
+    </h3>
+
+    <p>
+      শিক্ষা • প্রশিক্ষণ • শৃঙ্খলা • মানবিকতা
+    </p>
+
+    <p class="copyright">
+      © 2026 প্রিজন্স পাবলিক স্কুল, যশোর
+    </p>
+
+  </div>
+
+</footer>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+function showPage(pageId) {
+
+  // সব পেজ খুঁজে বের করা
+  const pages = document.querySelectorAll(".page");
+
+  // সব পেজ বন্ধ করা
+  pages.forEach(function(page) {
+    page.classList.remove("active");
+  });
+
+  // নির্বাচিত পেজ চালু করা
+  const selectedPage = document.getElementById(pageId);
+
+  if (selectedPage) {
+    selectedPage.classList.add("active");
+  }
+
+  // মোবাইল মেনু বন্ধ করা
+  const navLinks = document.getElementById("navLinks");
+
+  if (navLinks) {
+    navLinks.classList.remove("show");
+  }
+
+  // পেজের উপরে নিয়ে যাওয়া
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+
+
+function toggleMenu() {
+
+  const navLinks = document.getElementById("navLinks");
+
+  navLinks.classList.toggle("show");
+
+}
+
+
+
+function loadPage() {
+
+  // URL থেকে page নেওয়া
+  let pageId = window.location.hash.substring(1);
+
+  // কিছু না থাকলে Home
+  if (!pageId) {
+    pageId = "home";
+  }
+
+  showPage(pageId);
+
+}
+
+
+
+// ওয়েবসাইট চালু হলে
+document.addEventListener("DOMContentLoaded", function() {
+
+  loadPage();
+
+});
+
+
+
+// ব্রাউজারের Back/Forward করলে
+window.addEventListener("hashchange", function() {
+
+  loadPage();
+
+});
+
+</script>
+
+
+</body>
+</html>
